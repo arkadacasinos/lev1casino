@@ -1,0 +1,284 @@
+/* Лев Казино: собственные стили лендинга, мангленные классы с префиксом lc9x4- */
+
+:root {
+  --lc9-felt: #0e3f2e;
+  --lc9-deep: #092b1f;
+  --lc9-gold: #d8a544;
+  --lc9-cream: #f2ecdd;
+  --lc9-sage: #b7c4b2;
+  --lc9-line: rgba(216, 165, 68, 0.28);
+  --lc9-pad: 16px;
+  --lc9-rad: 14px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  background: var(--lc9-felt);
+}
+
+body {
+  margin: 0;
+  background: var(--lc9-felt);
+  color: var(--lc9-cream);
+  font-family: var(--font-manrope), system-ui, -apple-system, 'Segoe UI', sans-serif;
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2 {
+  margin: 0;
+  font-family: var(--font-unbounded), var(--font-manrope), sans-serif;
+  line-height: 1.25;
+  color: var(--lc9-cream);
+  text-wrap: balance;
+}
+
+p,
+ul,
+figure {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+.lc9x4-shell {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+.lc9x4-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px var(--lc9-pad);
+  border-bottom: 1px solid var(--lc9-line);
+}
+
+.lc9x4-mark {
+  font-family: var(--font-unbounded), sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  color: var(--lc9-gold);
+}
+
+.lc9x4-age {
+  font-size: 0.78rem;
+  color: var(--lc9-sage);
+}
+
+.lc9x4-main {
+  flex: 1;
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 20px var(--lc9-pad) 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.lc9x4-hero,
+.lc9x4-blk {
+  position: relative;
+  overflow: hidden;
+  background: var(--lc9-deep);
+  border: 1px solid var(--lc9-line);
+  border-radius: var(--lc9-rad);
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  scroll-margin-top: 14px;
+}
+
+.lc9x4-hero {
+  gap: 14px;
+}
+
+.lc9x4-blk::after {
+  content: attr(data-suit);
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 4.2rem;
+  line-height: 1;
+  color: var(--lc9-gold);
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.lc9x4-herotxt {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.lc9x4-h1 {
+  font-size: clamp(1.3rem, 5.6vw, 2.15rem);
+  font-weight: 700;
+}
+
+.lc9x4-g {
+  color: var(--lc9-gold);
+  font-style: normal;
+}
+
+.lc9x4-h2 {
+  font-size: clamp(1.02rem, 4.3vw, 1.4rem);
+  font-weight: 600;
+  padding-bottom: 10px;
+  border-bottom: 3px double var(--lc9-gold);
+}
+
+.lc9x4-lead {
+  color: var(--lc9-sage);
+}
+
+.lc9x4-txt {
+  color: var(--lc9-cream);
+}
+
+.lc9x4-txt strong,
+.lc9x4-lead strong {
+  color: var(--lc9-gold);
+  font-weight: 600;
+}
+
+.lc9x4-emblem img,
+.lc9x4-fig img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid var(--lc9-line);
+}
+
+.lc9x4-cap {
+  margin-top: 6px;
+  font-size: 0.78rem;
+  color: var(--lc9-sage);
+}
+
+.lc9x4-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.lc9x4-list li {
+  position: relative;
+  padding-left: 20px;
+}
+
+.lc9x4-list li::before {
+  content: '\2666\FE0E';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--lc9-gold);
+}
+
+.lc9x4-foot {
+  border-top: 1px solid var(--lc9-line);
+  background: var(--lc9-deep);
+  padding: 18px var(--lc9-pad) 26px;
+}
+
+.lc9x4-footin {
+  max-width: 760px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.lc9x4-tagtitle {
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--lc9-sage);
+}
+
+.lc9x4-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.lc9x4-tag {
+  display: inline-block;
+  padding: 6px 11px;
+  border: 1px solid var(--lc9-line);
+  border-radius: 999px;
+  background: rgba(216, 165, 68, 0.08);
+  color: var(--lc9-gold);
+  font-size: 0.82rem;
+  text-decoration: none;
+}
+
+.lc9x4-tag:hover {
+  background: rgba(216, 165, 68, 0.16);
+}
+
+.lc9x4-tag:focus-visible {
+  outline: 2px solid var(--lc9-gold);
+  outline-offset: 2px;
+}
+
+.lc9x4-copy {
+  font-size: 0.78rem;
+  color: var(--lc9-sage);
+}
+
+@media (min-width: 700px) {
+  :root {
+    --lc9-pad: 24px;
+  }
+
+  .lc9x4-hero {
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+
+  .lc9x4-hero .lc9x4-emblem {
+    flex: 0 0 42%;
+  }
+
+  .lc9x4-blk {
+    padding: 22px;
+    gap: 14px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .lc9x4-main {
+    max-width: 860px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
