@@ -94,6 +94,7 @@ export default function RootLayout({
   return (
     <html lang="ru" className={`${unbounded.variable} ${manrope.variable} lc9x4-root`}>
       <head>
+        <meta name="yandex-verification" content="df2aaa6bbe3b5a6d" />
         {/* Блок для дополнительных пользовательских тегов: вставляйте сюда свои meta, link и коды верификации */}
         <meta name="format-detection" content="telephone=no" />
       </head>
